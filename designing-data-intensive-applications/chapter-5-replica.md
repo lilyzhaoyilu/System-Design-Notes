@@ -7,9 +7,10 @@
 ## Reasons to replicate
 
 * To keep data geographically close to your users \(and thus **reduce access latency**\) 
-* To allow the system to continue working even if some of its parts have failed \(and thus **increase availability**\) 
-* To scale out the number of machines that can serve read queries \(and thus increase **read throughput**\)
+* To allow the system to continue working even if some of its parts have failed \(and thus **increase availability/ Scalabiltiy**\) 
+* To scale out the number of machines that can serve read queries \(and thus increase **read throughput/ High Availibity**\)
   * **Throughput吞吐量**: the number of records we can process per second, or the total time it takes to run a job on a dataset of a certain size.
+  * offer disconnected operation
 
 ## Difficulties and Methods
 
@@ -74,7 +75,11 @@ Advantages for multi-datacenter:
   </tbody>
 </table>
 
-### **3.**Leaderless Replication
+### **3.**Leaderless Replication / Dynamo-style
 
+every node can be written and queried. 
 
+Read request often sent to several nodes in parallel and version numbers are used to determine which value is newer. 
+
+Methods to fix stale values: 1\) read repair. When a read request finds out different versions, it gets repaired. 2\)anti-entropy process: a program running background looking for stale data
 
