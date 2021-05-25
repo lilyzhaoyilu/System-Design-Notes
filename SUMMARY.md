@@ -4,6 +4,6 @@
 
 ## Designing Data-Intensive Applications
 
-* [Content](designing-data-intensive-applications/content/README.md)
-  * [Chapter1 Reliability, Scalability, and Maintainability](designing-data-intensive-applications/content/untitled.md)
+* [Chapter1 Reliability, Scalability, and Maintainability](designing-data-intensive-applications/untitled.md)
+* [Chapter 5 Replica](designing-data-intensive-applications/chapter-5-replica.md)
 
